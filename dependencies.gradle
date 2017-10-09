@@ -1,0 +1,28 @@
+ext {
+    /* Android Configuration */
+    configuration =
+            [
+                    package                  : "com.vpaliy.mediumsdk",
+                    buildToolsVersion        : "26.0.0",
+                    compileSdkVersion        : 26,
+                    minSdkVersion            : 16,
+                    targetSdkVersion         : 25,
+                    versionCode              : 1,
+                    versionName              : "1.0",
+                    testInstrumentationRunner: "android.support.test.runner.AndroidJUnitRunner"
+
+            ]
+
+    /* Library versions */
+    butterKnifeVersion = "8.5.1"
+    supportVersion = "25.1.0"
+    rxJavaVersion = '2.0.2'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '1.0'
+    gsonVersion = '2.3'
+    okHttpVersion = '2.5.0'
+    retrofitVersion="2.2.0"
+    retrofitConverterVersion="2.1.0"
+    retrofitAdapterVersion="2.1.0"
+    constraintLayoutVersion="1.0.2"
+}

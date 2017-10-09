@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MediumSDK.iml" filepath="$PROJECT_DIR$/MediumSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/medium-sdk/medium-sdk.iml" filepath="$PROJECT_DIR$/medium-sdk/medium-sdk.iml" />
+    </modules>
+  </component>
+</project>
