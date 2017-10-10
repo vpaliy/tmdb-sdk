@@ -32,18 +32,6 @@ class MediumAuth(val context:Context,
                 = Builder(context,clientId,clientSecret).apply(block).build()
     }
 
-    fun connect(){
-        val manager=LocalBroadcastManager.getInstance(context)
-        manager.registerReceiver(object:BroadcastReceiver(){
-            override fun onReceive(context: Context?, intent: Intent) {
-                val successful=intent.getBooleanExtra(Constants.AUTH_STATUS,false)
-                if(successful){
-
-                }
-                manager.unregisterReceiver(this)
-            }
-        },IntentFilter(Constants.AUTH_ACTION))
-    }
 
     inline fun connect(crossinline success:(AccessToken?)->Unit){
         val manager=LocalBroadcastManager.getInstance(context)
