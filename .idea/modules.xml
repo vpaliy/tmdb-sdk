@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MediumSDK.iml" filepath="$PROJECT_DIR$/MediumSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/medium-sdk/medium-sdk.iml" filepath="$PROJECT_DIR$/medium-sdk/medium-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmdb/tmdb.iml" filepath="$PROJECT_DIR$/tmdb/tmdb.iml" />
     </modules>
   </component>
 </project>
