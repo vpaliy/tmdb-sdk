@@ -1,4 +1,4 @@
 package com.vpaliy.tmdb.model
 
-data class Keywords(var id:Int?,
-                    var keywords: Array<Keyword>?)
+data class Keywords(var id:Int,
+                    var keywords: Array<Keyword>)

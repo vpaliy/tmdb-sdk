@@ -1,8 +1,11 @@
 package com.vpaliy.tmdb
 
+import com.vpaliy.tmdb.service.MovieService
+import com.vpaliy.tmdb.service.Movies
+
 class TMDB(apiKey:String){
-    val service by lazy {
-        ServiceCreator.build(apiKey){}.build()
-                .createService(ServiceCreator::class.java)
+    val moviesService by lazy {
+        MovieService(ServiceCreator.build(apiKey){}.build()
+                .createService(Movies::class.java))
     }
 }
