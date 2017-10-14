@@ -10,90 +10,96 @@ import retrofit2.http.*
 interface Movies {
 
     @GET(Endpoints.MOVIES_DETAILS)
-    fun details(@Path(ID) id:String):Single<MovieDetails>
+    fun details(@Path(ID) id: String): Single<MovieDetails>
 
     @GET(Endpoints.MOVIES_DETAILS)
-    fun details(@Path(ID) id:String,
-                @QueryMap map:Map<String,String>):Single<MovieDetails>
+    fun details(@Path(ID) id: String,
+                @QueryMap map: Map<String, String>):Single<MovieDetails>
 
     @GET(Endpoints.MOVIES_ACCOUNT_STATES)
-    fun accountStates(@Path(ID) id:String,
-                      @Query(SESSION_ID) sessionId:String):Single<AccountState>
+    fun accountStates(@Path(ID) id: String,
+                      @Query(SESSION_ID) sessionId: String): Single<AccountState>
 
     @GET(Endpoints.MOVIES_ALTERNATIVE_TITLES)
-    fun alternativeTitles(@Path(ID) id:String):Single<AlternativeTitle>
+    fun alternativeTitles(@Path(ID) id: String): Single<AlternativeTitle>
 
     @GET(Endpoints.MOVIES_ALTERNATIVE_TITLES)
-    fun alternativeTitles(@Path(ID) id:String, @QueryMap options:Map<String,String>)
-                          :Single<AlternativeTitle>
+    fun alternativeTitles(@Path(ID) id: String,
+                          @QueryMap options: Map<String, String>):Single<AlternativeTitle>
 
     @GET(Endpoints.MOVIES_CHANGES)
-    fun changes(@Path(ID) id:String):Single<Changes>
+    fun changes(@Path(ID) id: String): Single<Changes>
 
     @GET(Endpoints.MOVIES_CHANGES)
-    fun changes(@Path(ID) id:String,
-                @QueryMap options:Map<String,String>):Single<Changes>
+    fun changes(@Path(ID) id: String,
+                @QueryMap options: Map<String, String>):Single<Changes>
 
     @GET(Endpoints.MOVIE_CREDITS)
-    fun credits(@Path(ID) id:String):Single<Credit>
+    fun credits(@Path(ID) id: String): Single<Credit>
 
     @GET(Endpoints.MOVIE_IMAGES)
-    fun images(@Path(ID) id:String):Single<MovieImages>
+    fun images(@Path(ID) id: String): Single<MovieImages>
 
     @GET(Endpoints.MOVIE_IMAGES)
-    fun images(@Path(ID) id:String, @QueryMap options:Map<String,String>):Single<MovieImages>
+    fun images(@Path(ID) id: String,
+               @QueryMap options: Map<String, String>):Single<MovieImages>
 
     @GET(Endpoints.MOVIE_KEYWORDS)
-    fun keywords(@Path(ID) id:String):Single<Keywords>
+    fun keywords(@Path(ID) id: String): Single<Keywords>
 
     @GET(Endpoints.MOVIE_RELEASE)
-    fun releaseDates(@Path(ID) id:String):Single<Releases>
+    fun releaseDates(@Path(ID) id: String): Single<Releases>
 
     @GET(Endpoints.MOVIE_VIDEOS)
-    fun videos(@Path(ID) id:String):Single<VideoResult>
+    fun videos(@Path(ID) id: String): Single<VideoResult>
 
     @GET(Endpoints.MOVIE_TRANSLATIONS)
-    fun translations(@Path(ID) id:String):Single<TranslationResult>
+    fun translations(@Path(ID) id: String): Single<TranslationResult>
 
     @GET(Endpoints.MOVIES_POPULAR)
-    fun popular():Single<ResultPage<Movie>>
+    fun popular(): Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIES_POPULAR)
-    fun popular(@QueryMap options:Map<String,String>):Single<ResultPage<Movie>>
+    fun popular(@QueryMap options: Map<String, String>): Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIE_RECOMMENDATIONS)
-    fun recommendations(@Path(ID) id:String):Single<ResultPage<Movie>>
+    fun recommendations(@Path(ID) id: String): Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIE_RECOMMENDATIONS)
-    fun recommendations(@Path(ID) id:String, @QueryMap options:Map<String,String>)
-                        :Single<ResultPage<Movie>>
+    fun recommendations(@Path(ID) id: String,
+                        @QueryMap options: Map<String, String>):Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIE_SIMILAR)
-    fun similar(@Path(ID) id:String):Single<ResultPage<Movie>>
+    fun similar(@Path(ID) id: String): Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIE_SIMILAR)
-    fun similar(@Path(ID) id:String, @QueryMap options:Map<String,String>)
-                :Single<ResultPage<Movie>>
+    fun similar(@Path(ID) id: String,
+                @QueryMap options: Map<String, String>):Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIE_REVIEWS)
-    fun reviews(@Path(ID) id:String, @QueryMap options:Map<String,String>)
-                :Single<ResultPage<Review>>
+    fun reviews(@Path(ID) id: String,
+                @QueryMap options: Map<String, String>):Single<ResultPage<Review>>
 
     @GET(Endpoints.MOVIE_REVIEWS)
-    fun reviews(@Path(ID) id:String):Single<ResultPage<Review>>
+    fun reviews(@Path(ID) id: String): Single<ResultPage<Review>>
 
     @GET(Endpoints.MOVIES_NOW_PLAYING)
-    fun nowPlaying(@Path(ID) id:String):Single<ResultPage<Movie>>
+    fun nowPlaying(@Path(ID) id: String): Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIES_NOW_PLAYING)
-    fun nowPlaying(@Path(ID) id:String, @QueryMap options: Map<String, String>)
-                   :Single<ResultPage<Movie>>
+    fun nowPlaying(@Path(ID) id: String,
+                   @QueryMap options: Map<String, String>):Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIES_TOP_RATED)
-    fun topRated(@Path(ID) id:String):Single<ResultPage<Movie>>
+    fun topRated(@Path(ID) id: String): Single<ResultPage<Movie>>
 
     @GET(Endpoints.MOVIES_TOP_RATED)
-    fun topRated(@Path(ID) id:String, @QueryMap options: Map<String, String>)
-            :Single<ResultPage<Movie>>
+    fun topRated(@Path(ID) id: String,
+                 @QueryMap options: Map<String, String>):Single<ResultPage<Movie>>
 
+    @GET(Endpoints.MOVIES_UPCOMING)
+    fun upcoming(): Single<UpcomingResult>
+
+    @GET(Endpoints.MOVIES_UPCOMING)
+    fun upcoming(@QueryMap options: Map<String, String>): Single<UpcomingResult>
 }
