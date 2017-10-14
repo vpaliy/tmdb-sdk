@@ -20,5 +20,9 @@ object Endpoints {
     const val MOVIE_VIDEOS="movie/{$ID}/videos"
     const val MOVIE_TRANSLATIONS="movie/{$ID}/translations"
     const val MOVIE_RECOMMENDATIONS="movie/{$ID}/recommendations"
-
+    const val MOVIE_SIMILAR="movie/{$ID}/similar"
+    const val MOVIES_POPULAR="movie/popular"
+    const val MOVIE_REVIEWS="movie/{$ID}/reviews"
+    const val MOVIES_NOW_PLAYING="movie/{$ID}/now_playing"
+    const val MOVIES_TOP_RATED="movie/{$ID}/top_rated"
 }

@@ -24,8 +24,8 @@ interface Movies {
     fun alternativeTitles(@Path(ID) id:String):Single<AlternativeTitle>
 
     @GET(Endpoints.MOVIES_ALTERNATIVE_TITLES)
-    fun alternativeTitles(@Path(ID) id:String,
-                          @QueryMap options:Map<String,String>):Single<AlternativeTitle>
+    fun alternativeTitles(@Path(ID) id:String, @QueryMap options:Map<String,String>)
+                          :Single<AlternativeTitle>
 
     @GET(Endpoints.MOVIES_CHANGES)
     fun changes(@Path(ID) id:String):Single<Changes>
@@ -41,8 +41,7 @@ interface Movies {
     fun images(@Path(ID) id:String):Single<MovieImages>
 
     @GET(Endpoints.MOVIE_IMAGES)
-    fun images(@Path(ID) id:String,
-               @QueryMap options:Map<String,String>):Single<MovieImages>
+    fun images(@Path(ID) id:String, @QueryMap options:Map<String,String>):Single<MovieImages>
 
     @GET(Endpoints.MOVIE_KEYWORDS)
     fun keywords(@Path(ID) id:String):Single<Keywords>
@@ -55,4 +54,46 @@ interface Movies {
 
     @GET(Endpoints.MOVIE_TRANSLATIONS)
     fun translations(@Path(ID) id:String):Single<TranslationResult>
+
+    @GET(Endpoints.MOVIES_POPULAR)
+    fun popular():Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIES_POPULAR)
+    fun popular(@QueryMap options:Map<String,String>):Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIE_RECOMMENDATIONS)
+    fun recommendations(@Path(ID) id:String):Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIE_RECOMMENDATIONS)
+    fun recommendations(@Path(ID) id:String, @QueryMap options:Map<String,String>)
+                        :Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIE_SIMILAR)
+    fun similar(@Path(ID) id:String):Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIE_SIMILAR)
+    fun similar(@Path(ID) id:String, @QueryMap options:Map<String,String>)
+                :Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIE_REVIEWS)
+    fun reviews(@Path(ID) id:String, @QueryMap options:Map<String,String>)
+                :Single<ResultPage<Review>>
+
+    @GET(Endpoints.MOVIE_REVIEWS)
+    fun reviews(@Path(ID) id:String):Single<ResultPage<Review>>
+
+    @GET(Endpoints.MOVIES_NOW_PLAYING)
+    fun nowPlaying(@Path(ID) id:String):Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIES_NOW_PLAYING)
+    fun nowPlaying(@Path(ID) id:String, @QueryMap options: Map<String, String>)
+                   :Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIES_TOP_RATED)
+    fun topRated(@Path(ID) id:String):Single<ResultPage<Movie>>
+
+    @GET(Endpoints.MOVIES_TOP_RATED)
+    fun topRated(@Path(ID) id:String, @QueryMap options: Map<String, String>)
+            :Single<ResultPage<Movie>>
+
 }

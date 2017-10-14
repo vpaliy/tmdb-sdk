@@ -15,19 +15,17 @@ class MainActivity : AppCompatActivity() {
         val data=emptyList<String>()
 
         TMDB(Config.CLIENT_ID).moviesService
-                .changes("271110"){
-                    query("language","english")
-                    query("query","second")
-                    query("page",1.toString())
+                .popular {
+                    query("page","5")
+                    query("language","russian")
                 }
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    if(it.changes.isNotEmpty()) {
-                        val change = it.changes[0]
-                        Log.d("MainActivity", change.key)
-                        Log.d("MainActivity", change.items.size.toString())
-                    }else Log.d("MainActivity", "empty")
+                    it.results.forEach {
+                        Log.d("MainActivity",it.title)
+                    }
+                    Log.d("MainActivity",it.page.toString())
                 },{it.printStackTrace()})
 
     }
