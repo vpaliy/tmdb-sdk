@@ -26,4 +26,8 @@ object Endpoints {
     const val MOVIES_NOW_PLAYING="movie/{$ID}/now_playing"
     const val MOVIES_TOP_RATED="movie/{$ID}/top_rated"
     const val MOVIES_UPCOMING="movie/{$ID}/upcoming"
+
+    /* Discover */
+    const val DISCOVER_MOVIES="discover/movie"
+    const val DISCOVER_TV="discover/tv"
 }
