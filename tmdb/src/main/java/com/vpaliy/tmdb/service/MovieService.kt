@@ -18,7 +18,7 @@ class MovieService(service: Movies): Movies by service{
             =changes(id,options(QueryBuilder()).build())
 
     inline fun images(id:String, options: QueryBuilder.()-> QueryBuilder)
-            :Single<MovieImages>
+            :Single<MediaImages>
             =images(id,options(QueryBuilder()).build())
 
     inline fun popular(options: QueryBuilder.()-> QueryBuilder)

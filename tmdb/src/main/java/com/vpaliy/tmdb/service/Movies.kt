@@ -38,11 +38,11 @@ interface Movies {
     fun credits(@Path(ID) id: String): Single<Credit>
 
     @GET(Endpoints.MOVIE_IMAGES)
-    fun images(@Path(ID) id: String): Single<MovieImages>
+    fun images(@Path(ID) id: String): Single<MediaImages>
 
     @GET(Endpoints.MOVIE_IMAGES)
     fun images(@Path(ID) id: String,
-               @QueryMap options: Map<String, String>):Single<MovieImages>
+               @QueryMap options: Map<String, String>):Single<MediaImages>
 
     @GET(Endpoints.MOVIE_KEYWORDS)
     fun keywords(@Path(ID) id: String): Single<Keywords>

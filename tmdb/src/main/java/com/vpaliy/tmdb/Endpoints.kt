@@ -30,4 +30,27 @@ object Endpoints {
     /* Discover */
     const val DISCOVER_MOVIES="discover/movie"
     const val DISCOVER_TV="discover/tv"
+
+    /* TV */
+    const val TV_DETAILS="tv/{$ID}"
+    const val TV_ACCOUNT_STATES="tv/{$ID}/account_states"
+    const val TV_ALTERNATIVE_TITLES="tv/{$ID}/alternative_titles"
+    const val TV_CHANGES="tv/{$ID}/changes"
+    const val TV_RATINGS="tv/{$ID}/content_ratings"
+    const val TV_CREDITS="tv/{$ID}/credits"
+    const val TV_EXTERNAL_IDS="tv/{$ID}/external_ids"
+    const val TV_IMAGES="tv/{$ID}/images"
+    const val TV_KEYWORDS="tv/{$ID}/keywords"
+    const val TV_RECOMMENDATINOS="tv/{$ID}/recommendations"
+    const val TV_SCREENED_THETRICALLY="tv/{$ID}/screened_theatrically"
+    const val TV_SIMILAR="tv/{$ID}/similar"
+    const val TV_TRANSLATIONS="tv/{$ID}/translations"
+    const val TV_VIDEOS="tv/{$ID}/videos"
+    const val TV_LATEST="tv/latest"
+    const val TV_AIRING_TODAY="tv/airing_today"
+    const val TV_ON_AIR="tv/on_the_air"
+    const val TV_POPULAR="tv/popular"
+    const val TV_TOP_RATED="tv/top_rated"
+
+
 }
