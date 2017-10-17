@@ -1,6 +1,6 @@
-package com.vpaliy.tmdb
+package com.vpaliy.tmdb.query
 
-class QueryBuilder{
+open class QueryBuilder{
 
     private val options=HashMap<String,String>()
 

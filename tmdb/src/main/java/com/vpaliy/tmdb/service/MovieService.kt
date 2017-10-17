@@ -1,6 +1,6 @@
 package com.vpaliy.tmdb.service
 
-import com.vpaliy.tmdb.QueryBuilder
+import com.vpaliy.tmdb.query.QueryBuilder
 import com.vpaliy.tmdb.model.*
 import io.reactivex.Single
 

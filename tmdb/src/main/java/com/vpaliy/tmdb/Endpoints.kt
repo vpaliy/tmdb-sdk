@@ -41,7 +41,7 @@ object Endpoints {
     const val TV_EXTERNAL_IDS="tv/{$ID}/external_ids"
     const val TV_IMAGES="tv/{$ID}/images"
     const val TV_KEYWORDS="tv/{$ID}/keywords"
-    const val TV_RECOMMENDATINOS="tv/{$ID}/recommendations"
+    const val TV_RECOMMENDATIONS ="tv/{$ID}/recommendations"
     const val TV_SCREENED_THETRICALLY="tv/{$ID}/screened_theatrically"
     const val TV_SIMILAR="tv/{$ID}/similar"
     const val TV_TRANSLATIONS="tv/{$ID}/translations"

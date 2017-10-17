@@ -48,10 +48,10 @@ interface TvShows {
     @GET(Endpoints.TV_KEYWORDS)
     fun keywords(@Path(ID) id:String):Single<Keywords>
 
-    @GET(Endpoints.TV_RECOMMENDATINOS)
+    @GET(Endpoints.TV_RECOMMENDATIONS)
     fun recommendations(@Path(ID) id:String):Single<ResultPage<TvShow>>
 
-    @GET(Endpoints.TV_RECOMMENDATINOS)
+    @GET(Endpoints.TV_RECOMMENDATIONS)
     fun recommendations(@Path(ID) id:String,
                         @QueryMap options:Map<String,String>):Single<ResultPage<TvShow>>
 
