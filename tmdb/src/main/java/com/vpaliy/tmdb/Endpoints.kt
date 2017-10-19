@@ -1,6 +1,7 @@
 package com.vpaliy.tmdb
 
 import com.vpaliy.tmdb.Constants.ID
+import com.vpaliy.tmdb.Constants.NUM
 
 object Endpoints {
 
@@ -52,5 +53,21 @@ object Endpoints {
     const val TV_POPULAR="tv/popular"
     const val TV_TOP_RATED="tv/top_rated"
 
+    /* TV Season */
+    const val SEASON_DETAILS="tv/{$ID}/season/{$NUM}"
+    const val SEASON_CHANGES="tv/season/{$NUM}/changes"
+    const val SEASON_STATES="tv/{$ID}/season/{$NUM}/account_states"
+    const val SEASON_CREDITS="tv/{$ID}/season/{$NUM}/credits"
+    const val SEASON_IDS="tv/{$ID}/season/{$NUM}/external_ids"
+    const val SEASON_IMAGES="tv/{$ID}/season/{$NUM}/images"
+    const val SEASON_VIDEOS="tv/{$ID}/season/{$NUM}/videos"
 
+    /* TV Episodes */
+    const val EPISODE_DETAILS="tv/{$ID}/season/{$NUM}/episode/{$NUM}"
+    const val EPISODE_CHANGES="tv/episode/{$ID}/changes"
+    const val EPISODE_STATES="tv/{$ID}/season/{$NUM}/episode/{$NUM}/account_states"
+    const val EPISODE_CREDITS="tv/{$ID}/season/{$NUM}/episode/{$NUM}/credits"
+    const val EPISODE_IDS="tv/{$ID}/season/{$NUM}/episode/{$NUM}/external_ids"
+    const val EPISODE_IMAGES="tv/{$ID}/season/{$NUM}/episode/{$NUM}/images"
+    const val EPISODE_VIDEOS="tv/{$ID}/season/{$NUM}/episode/{$NUM}/videos"
 }
