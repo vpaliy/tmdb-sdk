@@ -30,7 +30,7 @@ dependencies {
 
 ```kotlin
 val service=TMDB(Config.CLIENT_ID).moviesService
-service.popular()
+service.getPopular()
       .subscribeOn(Schedulers.io())
       .observeOn(AndroidSchedulers.mainThread())
       .subscribe()
@@ -39,7 +39,7 @@ service.popular()
  
  ```kotlin
 val service=TMDB(Config.CLIENT_ID).moviesService
-service.popular(){
+service.getPopular(){
             query("1","arg")
             query("2","arg")
             query("3","arg")

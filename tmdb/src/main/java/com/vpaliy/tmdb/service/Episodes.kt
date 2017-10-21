@@ -11,12 +11,12 @@ import retrofit2.http.QueryMap
 
 interface Episodes{
     @GET(Endpoints.EPISODE_DETAILS)
-    fun details(@Path(ID) id:String,
+    fun getDetails(@Path(ID) id:String,
                 @Path(NUM) seasonNumber:Int,
                 @Path(NUM) episodeNumber:Int):Single<TMDBEpisode>
 
     @GET(Endpoints.EPISODE_DETAILS)
-    fun details(@Path(ID) id:String,
+    fun getDetails(@Path(ID) id:String,
                 @Path(NUM) seasonNumber:Int,
                 @Path(NUM) episodeNumber:Int,
                 @QueryMap options:Map<String,String>):Single<TMDBEpisode>

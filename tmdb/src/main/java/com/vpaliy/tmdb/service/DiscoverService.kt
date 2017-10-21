@@ -7,11 +7,11 @@ import com.vpaliy.tmdb.query.QueryBuilder
 import io.reactivex.Single
 
 class DiscoverService(service:Discover):Discover by service{
-    inline fun discoverMovies(options: QueryBuilder.()->QueryBuilder)
+    inline fun searchMovies(options: QueryBuilder.()->QueryBuilder)
         :Single<TMDBResultPage<TMDBMovie>>
-        =discoverMovies(options(QueryBuilder()).build())
+        =searchMovies(options(QueryBuilder()).build())
 
-    inline fun discoverTv(options:QueryBuilder.()->QueryBuilder)
+    inline fun searchTv(options:QueryBuilder.()->QueryBuilder)
         :Single<TMDBResultPage<TMDBTvShow>>
-        =discoverTv(options(QueryBuilder()).build())
+        =searchTv(options(QueryBuilder()).build())
 }

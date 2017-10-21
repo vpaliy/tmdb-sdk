@@ -5,31 +5,31 @@ import com.vpaliy.tmdb.model.*
 import io.reactivex.Single
 
 class TvShowService(service:TvShows):TvShows by service{
-    inline fun details(id:String, options: QueryBuilder.()-> QueryBuilder)
+    inline fun getDetails(id:String, options: QueryBuilder.()-> QueryBuilder)
         :Single<TMDBTVDetails>
-        =details(id,options(QueryBuilder()).build())
+        = getDetails(id,options(QueryBuilder()).build())
 
-    inline fun accountStates(id:String,options: QueryBuilder.()-> QueryBuilder)
+    inline fun getAccountStates(id:String,options: QueryBuilder.()-> QueryBuilder)
         :Single<TMDBAccountState>
-        =accountStates(id,options(QueryBuilder()).build())
+        = getAccountStates(id,options(QueryBuilder()).build())
 
-    inline fun changes(id:String,options: QueryBuilder.()-> QueryBuilder)
+    inline fun getChanges(id:String,options: QueryBuilder.()-> QueryBuilder)
             :Single<TMDBChanges>
-            =changes(id,options(QueryBuilder()).build())
+            = getChanges(id,options(QueryBuilder()).build())
 
-    inline fun similar(id:String, options: QueryBuilder.() -> QueryBuilder)
+    inline fun getSimilar(id:String, options: QueryBuilder.() -> QueryBuilder)
             :Single<TMDBResultPage<TMDBTvShow>>
-            =similar(id,options(QueryBuilder()).build())
+            = getSimilar(id,options(QueryBuilder()).build())
 
-    inline fun recommendations(id:String, options: QueryBuilder.() -> QueryBuilder)
+    inline fun getRecommendations(id:String, options: QueryBuilder.() -> QueryBuilder)
             :Single<TMDBResultPage<TMDBTvShow>>
-            =recommendations(id,options(QueryBuilder()).build())
+            = getRecommendations(id,options(QueryBuilder()).build())
 
-    inline fun airingToday(options: QueryBuilder.()-> QueryBuilder)
+    inline fun getAiringToday(options: QueryBuilder.()-> QueryBuilder)
             :Single<TMDBResultPage<TMDBTvShow>>
-            =airingToday(options(QueryBuilder()).build())
+            = getAiringToday(options(QueryBuilder()).build())
 
-    inline fun tvOnAir(options: QueryBuilder.()-> QueryBuilder)
+    inline fun getTvOnAir(options: QueryBuilder.()-> QueryBuilder)
             :Single<TMDBResultPage<TMDBTvShow>>
-            =tvOnAir(options(QueryBuilder()).build())
+            = getTvOnAir(options(QueryBuilder()).build())
 }
