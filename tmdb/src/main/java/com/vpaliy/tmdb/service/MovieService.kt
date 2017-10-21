@@ -6,46 +6,46 @@ import io.reactivex.Single
 
 class MovieService(service: Movies): Movies by service{
     inline fun details(id:String,options: QueryBuilder.()-> QueryBuilder)
-            :Single<MovieDetails>
+            :Single<TMDBMovieDetails>
             =details(id,options(QueryBuilder()).build())
 
     inline fun alternativeTitles(id:String, options: QueryBuilder.()-> QueryBuilder)
-            :Single<AlternativeTitle>
+            :Single<TMDBAlternativeTitle>
             =alternativeTitles(id, options(QueryBuilder()).build())
 
     inline fun changes(id:String, options: QueryBuilder.()-> QueryBuilder)
-            :Single<Changes>
+            :Single<TMDBChanges>
             =changes(id,options(QueryBuilder()).build())
 
     inline fun images(id:String, options: QueryBuilder.()-> QueryBuilder)
-            :Single<MediaImages>
+            :Single<TMDBMediaImages>
             =images(id,options(QueryBuilder()).build())
 
     inline fun popular(options: QueryBuilder.()-> QueryBuilder)
-            :Single<ResultPage<Movie>>
+            :Single<TMDBResultPage<TMDBMovie>>
             =popular(options(QueryBuilder()).build())
 
     inline fun recommendations(id:String, options: QueryBuilder.() -> QueryBuilder)
-            :Single<ResultPage<Movie>>
+            :Single<TMDBResultPage<TMDBMovie>>
             =recommendations(id,options(QueryBuilder()).build())
 
     inline fun similar(id:String,options: QueryBuilder.() -> QueryBuilder)
-            :Single<ResultPage<Movie>>
+            :Single<TMDBResultPage<TMDBMovie>>
             =similar(id,options(QueryBuilder()).build())
 
     inline fun reviews(id:String,options: QueryBuilder.() -> QueryBuilder)
-            :Single<ResultPage<Review>>
+            :Single<TMDBResultPage<TMDBReview>>
             =reviews(id,options(QueryBuilder()).build())
 
     inline fun nowPlaying(id:String,options: QueryBuilder.() -> QueryBuilder)
-            :Single<ResultPage<Movie>>
+            :Single<TMDBResultPage<TMDBMovie>>
             =nowPlaying(id,options(QueryBuilder()).build())
 
     inline fun topRated(id:String,options: QueryBuilder.() -> QueryBuilder)
-            :Single<ResultPage<Movie>>
+            :Single<TMDBResultPage<TMDBMovie>>
             =topRated(id,options(QueryBuilder()).build())
 
     inline fun upcoming(options: QueryBuilder.()-> QueryBuilder)
-            :Single<UpcomingResult>
+            :Single<TMDBUpcomingResult>
             =upcoming(options(QueryBuilder()).build())
 }

@@ -1,14 +1,14 @@
 package com.vpaliy.tmdb.model
 
-data class TvShowDetails(var backdrop_path:String,
+data class TMDBTVDetails(var backdrop_path:String,
                          var first_air_date:String,
                          var episode_run_time:Array<Int>,
                          var origin_country:Array<String>,
-                         var genres:Array<Genre>,
-                         var created_by:Array<Creator>,
-                         var production_companies:Array<ProductionCompany>,
-                         var networks:Array<Network>,
-                         var seasons:Array<Season>,
+                         var genres:Array<TMDBGenre>,
+                         var created_by:Array<TMDBCreator>,
+                         var production_companies:Array<TMDBProductionCompany>,
+                         var networks:Array<TMDBNetwork>,
+                         var seasons:Array<TMDBSeason>,
                          var languages:Array<String>,
                          var homepage:String,
                          var id:Int,
@@ -28,7 +28,7 @@ data class TvShowDetails(var backdrop_path:String,
                          var vote_count:Int)
 
 
-data class Creator(var id:Int,
-                   var name:String,
-                   var gender:Int?,
-                   var profile_path:String)
+data class TMDBCreator(var id:Int,
+                       var name:String,
+                       var gender:Int?,
+                       var profile_path:String)

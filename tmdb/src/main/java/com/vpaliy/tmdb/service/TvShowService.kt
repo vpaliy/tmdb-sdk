@@ -6,30 +6,30 @@ import io.reactivex.Single
 
 class TvShowService(service:TvShows):TvShows by service{
     inline fun details(id:String, options: QueryBuilder.()-> QueryBuilder)
-        :Single<TvShowDetails>
+        :Single<TMDBTVDetails>
         =details(id,options(QueryBuilder()).build())
 
     inline fun accountStates(id:String,options: QueryBuilder.()-> QueryBuilder)
-        :Single<AccountState>
+        :Single<TMDBAccountState>
         =accountStates(id,options(QueryBuilder()).build())
 
     inline fun changes(id:String,options: QueryBuilder.()-> QueryBuilder)
-            :Single<Changes>
+            :Single<TMDBChanges>
             =changes(id,options(QueryBuilder()).build())
 
     inline fun similar(id:String, options: QueryBuilder.() -> QueryBuilder)
-            :Single<ResultPage<TvShow>>
+            :Single<TMDBResultPage<TMDBTvShow>>
             =similar(id,options(QueryBuilder()).build())
 
     inline fun recommendations(id:String, options: QueryBuilder.() -> QueryBuilder)
-            :Single<ResultPage<TvShow>>
+            :Single<TMDBResultPage<TMDBTvShow>>
             =recommendations(id,options(QueryBuilder()).build())
 
     inline fun airingToday(options: QueryBuilder.()-> QueryBuilder)
-            :Single<ResultPage<TvShow>>
+            :Single<TMDBResultPage<TMDBTvShow>>
             =airingToday(options(QueryBuilder()).build())
 
     inline fun tvOnAir(options: QueryBuilder.()-> QueryBuilder)
-            :Single<ResultPage<TvShow>>
+            :Single<TMDBResultPage<TMDBTvShow>>
             =tvOnAir(options(QueryBuilder()).build())
 }
