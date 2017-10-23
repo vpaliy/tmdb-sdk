@@ -10,7 +10,6 @@ object Endpoints {
     const val AUTH_TOKEN_LOGIN="authentication/token/validate_with_login"
 
     /* Movies */
-
     const val MOVIES_DETAILS="movie/{$ID}"
     const val MOVIES_ACCOUNT_STATES="movie/{$ID}/account_states"
     const val MOVIES_ALTERNATIVE_TITLES="movie/{$ID}/alternative_titles"
