@@ -6,7 +6,7 @@ import io.reactivex.Single
 
 class TvShowService(service:TvShows):TvShows by service{
     inline fun getDetails(id:String, options: QueryBuilder.()-> QueryBuilder)
-        :Single<TMDBTVDetails>
+        :Single<TVDetails>
         = getDetails(id,options(QueryBuilder()).build())
 
     inline fun getAccountStates(id:String,options: QueryBuilder.()-> QueryBuilder)

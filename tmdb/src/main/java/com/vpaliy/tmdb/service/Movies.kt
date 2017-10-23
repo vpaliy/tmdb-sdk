@@ -84,18 +84,16 @@ interface Movies {
     fun getReviews(@Path(ID) id: String): Single<Page<ReviewModel>>
 
     @GET(Endpoints.MOVIES_NOW_PLAYING)
-    fun getNowPlaying(@Path(ID) id: String): Single<Page<MovieModel>>
+    fun getNowPlaying(): Single<Page<MovieModel>>
 
     @GET(Endpoints.MOVIES_NOW_PLAYING)
-    fun getNowPlaying(@Path(ID) id: String,
-                   @QueryMap options: Map<String, String>):Single<Page<MovieModel>>
+    fun getNowPlaying(@QueryMap options: Map<String, String>):Single<Page<MovieModel>>
 
     @GET(Endpoints.MOVIES_TOP_RATED)
-    fun getTopRated(@Path(ID) id: String): Single<Page<MovieModel>>
+    fun getTopRated(): Single<Page<MovieModel>>
 
     @GET(Endpoints.MOVIES_TOP_RATED)
-    fun getTopRated(@Path(ID) id: String,
-                 @QueryMap options: Map<String, String>):Single<Page<MovieModel>>
+    fun getTopRated(@QueryMap options: Map<String, String>):Single<Page<MovieModel>>
 
     @GET(Endpoints.MOVIES_UPCOMING)
     fun getUpcoming(): Single<TMDBUpcomingResult>

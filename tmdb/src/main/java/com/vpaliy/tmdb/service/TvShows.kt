@@ -10,11 +10,11 @@ import retrofit2.http.QueryMap
 
 interface TvShows {
     @GET(Endpoints.TV_DETAILS)
-    fun getDetails(@Path(ID) id:String):Single<TMDBTVDetails>
+    fun getDetails(@Path(ID) id:String):Single<TVDetails>
 
     @GET(Endpoints.TV_DETAILS)
     fun getDetails(@Path(ID) id:String,
-                   @QueryMap options:Map<String,String>):Single<TMDBTVDetails>
+                   @QueryMap options:Map<String,String>):Single<TVDetails>
 
     @GET(Endpoints.TV_ACCOUNT_STATES)
     fun getAccountStates(@Path(ID) id:String):Single<AccountState>

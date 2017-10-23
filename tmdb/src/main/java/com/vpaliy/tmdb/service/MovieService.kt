@@ -37,13 +37,13 @@ class MovieService(service: Movies): Movies by service{
             :Single<Page<ReviewModel>>
             =getReviews(id,options(QueryBuilder()).build())
 
-    inline fun getNowPlaying(id:String,options: QueryBuilder.() -> QueryBuilder)
+    inline fun getNowPlaying(options: QueryBuilder.() -> QueryBuilder)
             :Single<Page<MovieModel>>
-            =getNowPlaying(id,options(QueryBuilder()).build())
+            =getNowPlaying(options(QueryBuilder()).build())
 
     inline fun getTopRated(id:String,options: QueryBuilder.() -> QueryBuilder)
             :Single<Page<MovieModel>>
-            =getTopRated(id,options(QueryBuilder()).build())
+            =getTopRated(options(QueryBuilder()).build())
 
     inline fun getUpcoming(options: QueryBuilder.()-> QueryBuilder)
             :Single<TMDBUpcomingResult>
