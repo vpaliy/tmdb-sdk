@@ -6,43 +6,43 @@ import io.reactivex.Single
 
 class MovieService(service: Movies): Movies by service{
     inline fun getDetails(id:String,options: QueryBuilder.()-> QueryBuilder)
-            :Single<TMDBMovieDetails>
+            :Single<MovieDetails>
             =getDetails(id,options(QueryBuilder()).build())
 
     inline fun getAlternativeTitles(id:String, options: QueryBuilder.()-> QueryBuilder)
-            :Single<TMDBAlternativeTitle>
+            :Single<AlternativeTitle>
             =getAlternativeTitles(id, options(QueryBuilder()).build())
 
     inline fun getChanges(id:String, options: QueryBuilder.()-> QueryBuilder)
-            :Single<TMDBChanges>
+            :Single<Changes>
             =getChanges(id,options(QueryBuilder()).build())
 
     inline fun getImages(id:String, options: QueryBuilder.()-> QueryBuilder)
-            :Single<TMDBMediaImages>
+            :Single<MediaImages>
             =getImages(id,options(QueryBuilder()).build())
 
     inline fun getPopular(options: QueryBuilder.()-> QueryBuilder)
-            :Single<TMDBResultPage<TMDBMovie>>
+            :Single<Page<MovieModel>>
             =getPopular(options(QueryBuilder()).build())
 
     inline fun getRecommendations(id:String, options: QueryBuilder.() -> QueryBuilder)
-            :Single<TMDBResultPage<TMDBMovie>>
+            :Single<Page<MovieModel>>
             =getRecommendations(id,options(QueryBuilder()).build())
 
     inline fun getSimilar(id:String,options: QueryBuilder.() -> QueryBuilder)
-            :Single<TMDBResultPage<TMDBMovie>>
+            :Single<Page<MovieModel>>
             =getSimilar(id,options(QueryBuilder()).build())
 
     inline fun getReviews(id:String,options: QueryBuilder.() -> QueryBuilder)
-            :Single<TMDBResultPage<TMDBReview>>
+            :Single<Page<ReviewModel>>
             =getReviews(id,options(QueryBuilder()).build())
 
     inline fun getNowPlaying(id:String,options: QueryBuilder.() -> QueryBuilder)
-            :Single<TMDBResultPage<TMDBMovie>>
+            :Single<Page<MovieModel>>
             =getNowPlaying(id,options(QueryBuilder()).build())
 
     inline fun getTopRated(id:String,options: QueryBuilder.() -> QueryBuilder)
-            :Single<TMDBResultPage<TMDBMovie>>
+            :Single<Page<MovieModel>>
             =getTopRated(id,options(QueryBuilder()).build())
 
     inline fun getUpcoming(options: QueryBuilder.()-> QueryBuilder)

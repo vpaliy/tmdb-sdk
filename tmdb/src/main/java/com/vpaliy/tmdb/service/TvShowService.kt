@@ -10,26 +10,26 @@ class TvShowService(service:TvShows):TvShows by service{
         = getDetails(id,options(QueryBuilder()).build())
 
     inline fun getAccountStates(id:String,options: QueryBuilder.()-> QueryBuilder)
-        :Single<TMDBAccountState>
+        :Single<AccountState>
         = getAccountStates(id,options(QueryBuilder()).build())
 
     inline fun getChanges(id:String,options: QueryBuilder.()-> QueryBuilder)
-            :Single<TMDBChanges>
+            :Single<Changes>
             = getChanges(id,options(QueryBuilder()).build())
 
     inline fun getSimilar(id:String, options: QueryBuilder.() -> QueryBuilder)
-            :Single<TMDBResultPage<TMDBTvShow>>
+            :Single<Page<TVShowModel>>
             = getSimilar(id,options(QueryBuilder()).build())
 
     inline fun getRecommendations(id:String, options: QueryBuilder.() -> QueryBuilder)
-            :Single<TMDBResultPage<TMDBTvShow>>
+            :Single<Page<TVShowModel>>
             = getRecommendations(id,options(QueryBuilder()).build())
 
     inline fun getAiringToday(options: QueryBuilder.()-> QueryBuilder)
-            :Single<TMDBResultPage<TMDBTvShow>>
+            :Single<Page<TVShowModel>>
             = getAiringToday(options(QueryBuilder()).build())
 
     inline fun getTvOnAir(options: QueryBuilder.()-> QueryBuilder)
-            :Single<TMDBResultPage<TMDBTvShow>>
+            :Single<Page<TVShowModel>>
             = getTvOnAir(options(QueryBuilder()).build())
 }

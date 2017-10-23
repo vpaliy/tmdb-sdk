@@ -1,17 +1,17 @@
 package com.vpaliy.tmdb.service
 
 import com.vpaliy.tmdb.Endpoints
-import com.vpaliy.tmdb.model.TMDBMovie
-import com.vpaliy.tmdb.model.TMDBResultPage
-import com.vpaliy.tmdb.model.TMDBTvShow
+import com.vpaliy.tmdb.model.MovieModel
+import com.vpaliy.tmdb.model.Page
+import com.vpaliy.tmdb.model.TVShowModel
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.QueryMap
 
 interface Discover{
     @GET(Endpoints.DISCOVER_MOVIES)
-    fun searchMovies(@QueryMap options:Map<String,String>):Single<TMDBResultPage<TMDBMovie>>
+    fun searchMovies(@QueryMap options:Map<String,String>):Single<Page<MovieModel>>
 
     @GET(Endpoints.DISCOVER_TV)
-    fun searchTv(@QueryMap options:Map<String,String>):Single<TMDBResultPage<TMDBTvShow>>
+    fun searchTv(@QueryMap options:Map<String,String>):Single<Page<TVShowModel>>
 }

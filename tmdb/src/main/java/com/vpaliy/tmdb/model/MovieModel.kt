@@ -1,6 +1,6 @@
 package com.vpaliy.tmdb.model
 
-open class TMDBMovie {
+open class MovieModel {
     var poster_path:String?=null
     var adult:Boolean?=null
     var overview:String?=null

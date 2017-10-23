@@ -53,7 +53,7 @@ object Endpoints {
     const val TV_POPULAR="tv/getPopular"
     const val TV_TOP_RATED="tv/top_rated"
 
-    /* TV TMDBSeason */
+    /* TV SeasonModel */
     const val SEASON_DETAILS="tv/{$ID}/season/{$NUM}"
     const val SEASON_CHANGES="tv/season/{$NUM}/getChanges"
     const val SEASON_STATES="tv/{$ID}/season/{$NUM}/account_states"
