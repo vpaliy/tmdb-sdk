@@ -48,7 +48,7 @@ interface Movies {
     fun getKeywords(@Path(ID) id: String): Single<Keywords>
 
     @GET(Endpoints.MOVIE_RELEASE)
-    fun getReleaseDates(@Path(ID) id: String): Single<TMDBReleases>
+    fun getReleaseDates(@Path(ID) id: String): Single<Releases>
 
     @GET(Endpoints.MOVIE_VIDEOS)
     fun getVideos(@Path(ID) id: String): Single<VideoResult>
