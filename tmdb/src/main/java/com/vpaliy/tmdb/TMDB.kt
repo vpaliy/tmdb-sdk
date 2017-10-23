@@ -17,4 +17,9 @@ class TMDB(apiKey:String){
         TvShowService(ServiceCreator.build(apiKey){}.build()
                 .createService(TvShows::class.java))
     }
+
+    val genreService by lazy {
+        ServiceCreator.build(apiKey){}.build()
+                .createService(GenreService::class.java)
+    }
 }

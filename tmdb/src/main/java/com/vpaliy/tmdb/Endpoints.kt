@@ -70,4 +70,9 @@ object Endpoints {
     const val EPISODE_IDS="tv/{$ID}/season/{$NUM}/episode/{$NUM}/external_ids"
     const val EPISODE_IMAGES="tv/{$ID}/season/{$NUM}/episode/{$NUM}/getImages"
     const val EPISODE_VIDEOS="tv/{$ID}/season/{$NUM}/episode/{$NUM}/getVideos"
+
+    /* Genres */
+    const val MOVIES_GENRE="genre/movie/list"
+    const val TV_GENRES="genre/tv/list"
+    const val MOVIES_BY_GENRE="genre/{$ID}/movies"
 }
