@@ -41,7 +41,7 @@ class MovieService(service: Movies): Movies by service{
             :Single<Page<MovieModel>>
             =getNowPlaying(options(QueryBuilder()).build())
 
-    inline fun getTopRated(id:String,options: QueryBuilder.() -> QueryBuilder)
+    inline fun getTopRated(options: QueryBuilder.() -> QueryBuilder)
             :Single<Page<MovieModel>>
             =getTopRated(options(QueryBuilder()).build())
 

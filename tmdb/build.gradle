@@ -38,12 +38,12 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:customtabs:26.1.0'
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation "com.google.code.gson:gson:${gsonVersion}"
-    implementation "com.squareup.okhttp:okhttp:${okHttpVersion}"
-    implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
-    implementation "com.squareup.retrofit2:converter-gson:${retrofitConverterVersion}"
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    api 'com.android.support:appcompat-v7:26.1.0'
+    api 'com.android.support:customtabs:26.1.0'
+    api"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    api "com.google.code.gson:gson:${gsonVersion}"
+    api "com.squareup.okhttp:okhttp:${okHttpVersion}"
+    api "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    api "com.squareup.retrofit2:converter-gson:${retrofitConverterVersion}"
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
 }
