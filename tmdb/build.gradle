@@ -23,6 +23,10 @@ android {
         exclude 'META-INF/LICENSE'
     }
 
+    kapt {
+        generateStubs = true
+    }
+
     lintOptions {
         quiet true
         abortOnError false
