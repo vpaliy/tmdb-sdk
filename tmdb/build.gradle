@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 def config=rootProject.ext.configuration
@@ -17,22 +16,10 @@ android {
 
     packagingOptions {
         exclude 'LICENSE.txt'
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/ASL2.0'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
     }
 
     kapt {
         generateStubs = true
-    }
-
-    lintOptions {
-        quiet true
-        abortOnError false
-        ignoreWarnings true
-        disable 'InvalidPackage'
-        disable 'OldTargetApi'
     }
 
     sourceSets {
@@ -42,12 +29,12 @@ android {
 }
 
 dependencies {
-    api 'com.android.support:appcompat-v7:26.1.0'
-    api 'com.android.support:customtabs:26.1.0'
-    api"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    api "com.google.code.gson:gson:${gsonVersion}"
-    api "com.squareup.okhttp:okhttp:${okHttpVersion}"
-    api "com.squareup.retrofit2:retrofit:${retrofitVersion}"
-    api "com.squareup.retrofit2:converter-gson:${retrofitConverterVersion}"
-    api 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:customtabs:26.1.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "com.google.code.gson:gson:${gsonVersion}"
+    compile "com.squareup.okhttp:okhttp:${okHttpVersion}"
+    compile "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofitConverterVersion}"
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
 }
