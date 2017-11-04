@@ -24,9 +24,9 @@ object Endpoints {
     const val MOVIE_SIMILAR="movie/{$ID}/similar"
     const val MOVIES_POPULAR="movie/popular"
     const val MOVIE_REVIEWS="movie/{$ID}/reviews"
-    const val MOVIES_NOW_PLAYING="movie/{$ID}/now_playing"
-    const val MOVIES_TOP_RATED="movie/{$ID}/top_rated"
-    const val MOVIES_UPCOMING="movie/{$ID}/upcoming"
+    const val MOVIES_NOW_PLAYING="movie/now_playing"
+    const val MOVIES_TOP_RATED="movie/top_rated"
+    const val MOVIES_UPCOMING="movie/upcoming"
 
     /* Discover */
     const val DISCOVER_MOVIES="discover/movie"
@@ -71,7 +71,7 @@ object Endpoints {
     const val EPISODE_IMAGES="tv/{$ID}/season/{$NUM}/episode/{$NUM}/images"
     const val EPISODE_VIDEOS="tv/{$ID}/season/{$NUM}/episode/{$NUM}/videos"
 
-    /* Genres */
+    /* Genres  */
     const val MOVIES_GENRE="genre/movie/list"
     const val TV_GENRES="genre/tv/list"
     const val MOVIES_BY_GENRE="genre/{$ID}/movies"
