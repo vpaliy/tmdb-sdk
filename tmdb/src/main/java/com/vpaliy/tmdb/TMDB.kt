@@ -25,6 +25,6 @@ class TMDB(apiKey:String){
 
     val searchService by lazy {
         ServiceCreator.build(apiKey){}.build()
-                .createService(SearchService::class.java)
+                .createService(Search::class.java)
     }
 }
