@@ -10,8 +10,8 @@ import retrofit2.http.QueryMap
 
 interface Discover{
     @GET(Endpoints.DISCOVER_MOVIES)
-    fun searchMovies(@QueryMap options:Map<String,String>):Single<Page<MovieModel>>
+    fun discoverMovies(@QueryMap options:Map<String,String>):Single<Page<MovieModel>>
 
     @GET(Endpoints.DISCOVER_TV)
-    fun searchTv(@QueryMap options:Map<String,String>):Single<Page<TVShowModel>>
+    fun discoverTV(@QueryMap options:Map<String,String>):Single<Page<TVShowModel>>
 }

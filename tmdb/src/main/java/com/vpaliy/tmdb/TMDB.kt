@@ -22,4 +22,9 @@ class TMDB(apiKey:String){
         ServiceCreator.build(apiKey){}.build()
                 .createService(GenreService::class.java)
     }
+
+    val searchService by lazy {
+        ServiceCreator.build(apiKey){}.build()
+                .createService(SearchService::class.java)
+    }
 }
