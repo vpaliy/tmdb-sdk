@@ -1,6 +1,7 @@
 package com.vpaliy.tmdb.service
 
 import com.vpaliy.tmdb.Endpoints
+import com.vpaliy.tmdb.model.ActorModel
 import com.vpaliy.tmdb.model.MovieModel
 import com.vpaliy.tmdb.model.Page
 import com.vpaliy.tmdb.model.TVShowModel
@@ -25,5 +26,13 @@ interface Search{
     @GET(Endpoints.SEARCH_TV)
     fun searchTV(@Query("query") query:String,@QueryMap map:Map<String,String>)
             :Single<Page<TVShowModel>>
+
+    @GET(Endpoints.SEARCH_PEOPLE)
+    fun searchPeople(@Query("query") query:String, @QueryMap map:Map<String,String>)
+            :Single<Page<ActorModel>>
+
+    @GET(Endpoints.SEARCH_PEOPLE)
+    fun searchPeople(@Query("query") query:String)
+            :Single<Page<ActorModel>>
 
 }
