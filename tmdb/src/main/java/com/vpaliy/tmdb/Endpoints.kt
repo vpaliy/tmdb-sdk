@@ -32,6 +32,15 @@ object Endpoints {
     const val DISCOVER_MOVIES="discover/movie"
     const val DISCOVER_TV="discover/tv"
 
+    /* Search */
+    const val SEARCH_MOVIE="search/movie"
+    const val SEARCH_TV="search/tv"
+    const val SEARCH_PEOPLE="search/people"
+    const val SEARCH_COMPANY="search/company"
+    const val SEARCH_COLLECTION="search/collection"
+    const val SEARCH_KEYWORD="search/keyword"
+    const val SEARCH_MULTI="search/multi"
+
     /* TV */
     const val TV_DETAILS="tv/{$ID}"
     const val TV_ACCOUNT_STATES="tv/{$ID}/account_states"
