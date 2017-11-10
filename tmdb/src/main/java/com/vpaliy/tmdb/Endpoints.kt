@@ -35,7 +35,7 @@ object Endpoints {
     /* Search */
     const val SEARCH_MOVIE="search/movie"
     const val SEARCH_TV="search/tv"
-    const val SEARCH_PEOPLE="search/people"
+    const val SEARCH_PEOPLE="search/person"
     const val SEARCH_COMPANY="search/company"
     const val SEARCH_COLLECTION="search/collection"
     const val SEARCH_KEYWORD="search/keyword"
