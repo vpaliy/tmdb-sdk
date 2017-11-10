@@ -1,5 +1,7 @@
 # tmdb-sdk
 
+[![Build Status](https://travis-ci.org/vpaliyX/tmdb-sdk.svg?branch=master)](https://travis-ci.org/vpaliyX/tmdb-sdk)
+
 A wrapper for the [TMBD](https://www.themoviedb.org/?_dc=1491949818) API. 
 
 ## Install ##
