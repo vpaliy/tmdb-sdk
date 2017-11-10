@@ -12,7 +12,7 @@ open class TVShowModel{
     var original_language=""
     var original_name=""
     var overview=""
-    var vote_average=0
+    var vote_average=0f
     var vote_count=0
     var name=""
 }

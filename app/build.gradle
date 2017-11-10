@@ -20,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
+    
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
         main.java.srcDirs += [file("$buildDir/generated/source/kapt/main")]
