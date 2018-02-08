@@ -8,10 +8,10 @@ import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.QueryMap
 
-interface Discover{
-    @GET(Endpoints.DISCOVER_MOVIES)
-    fun discoverMovies(@QueryMap options:Map<String,String>):Single<Page<MovieModel>>
+interface Discover {
+  @GET(Endpoints.DISCOVER_MOVIES)
+  fun discoverMovies(@QueryMap options: Map<String, String>): Single<Page<MovieModel>>
 
-    @GET(Endpoints.DISCOVER_TV)
-    fun discoverTV(@QueryMap options:Map<String,String>):Single<Page<TVShowModel>>
+  @GET(Endpoints.DISCOVER_TV)
+  fun discoverTV(@QueryMap options: Map<String, String>): Single<Page<TVShowModel>>
 }

@@ -9,13 +9,13 @@ import com.vpaliy.tmdb.Constants.ID
 import com.vpaliy.tmdb.model.MovieModel
 import com.vpaliy.tmdb.model.Page
 
-interface GenreService{
-    @GET(Endpoints.MOVIES_GENRE)
-    fun getMovieGenres():Single<Genres>
+interface GenreService {
+  @GET(Endpoints.MOVIES_GENRE)
+  fun getMovieGenres(): Single<Genres>
 
-    @GET(Endpoints.TV_GENRES)
-    fun getTVGenres():Single<Genres>
+  @GET(Endpoints.TV_GENRES)
+  fun getTVGenres(): Single<Genres>
 
-    @GET(Endpoints.MOVIES_BY_GENRE)
-    fun getMovies(@Path(ID) id:String):Single<Page<MovieModel>>
+  @GET(Endpoints.MOVIES_BY_GENRE)
+  fun getMovies(@Path(ID) id: String): Single<Page<MovieModel>>
 }

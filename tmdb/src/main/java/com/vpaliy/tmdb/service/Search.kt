@@ -10,29 +10,29 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import retrofit2.http.QueryMap
 
-interface Search{
-    @GET(Endpoints.SEARCH_MOVIE)
-    fun searchMovies(@Query("query") query:String)
-            :Single<Page<MovieModel>>
+interface Search {
+  @GET(Endpoints.SEARCH_MOVIE)
+  fun searchMovies(@Query("query") query: String)
+      : Single<Page<MovieModel>>
 
-    @GET(Endpoints.SEARCH_MOVIE)
-    fun searchMovies(@Query("query") query:String, @QueryMap map:Map<String,String>)
-            :Single<Page<MovieModel>>
+  @GET(Endpoints.SEARCH_MOVIE)
+  fun searchMovies(@Query("query") query: String, @QueryMap map: Map<String, String>)
+      : Single<Page<MovieModel>>
 
-    @GET(Endpoints.SEARCH_TV)
-    fun searchTV(@Query("query") query:String)
-            :Single<Page<TVShowModel>>
+  @GET(Endpoints.SEARCH_TV)
+  fun searchTV(@Query("query") query: String)
+      : Single<Page<TVShowModel>>
 
-    @GET(Endpoints.SEARCH_TV)
-    fun searchTV(@Query("query") query:String,@QueryMap map:Map<String,String>)
-            :Single<Page<TVShowModel>>
+  @GET(Endpoints.SEARCH_TV)
+  fun searchTV(@Query("query") query: String, @QueryMap map: Map<String, String>)
+      : Single<Page<TVShowModel>>
 
-    @GET(Endpoints.SEARCH_PEOPLE)
-    fun searchPeople(@Query("query") query:String, @QueryMap map:Map<String,String>)
-            :Single<Page<ActorModel>>
+  @GET(Endpoints.SEARCH_PEOPLE)
+  fun searchPeople(@Query("query") query: String, @QueryMap map: Map<String, String>)
+      : Single<Page<ActorModel>>
 
-    @GET(Endpoints.SEARCH_PEOPLE)
-    fun searchPeople(@Query("query") query:String)
-            :Single<Page<ActorModel>>
+  @GET(Endpoints.SEARCH_PEOPLE)
+  fun searchPeople(@Query("query") query: String)
+      : Single<Page<ActorModel>>
 
 }

@@ -1,5 +1,5 @@
 package com.vpaliy.tmdb.service
 
-interface People{
+interface People {
 
 }
